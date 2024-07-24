@@ -18,6 +18,12 @@ const ComponentsTheme = {
         fontSize: '14px',
         color: '#070707'
       }
+    },
+    Heading: {
+      baseStyle: {
+        fontFamily: `'Inter', sans-serif`,
+        color: '#070707'
+      }
     }
   }
 };

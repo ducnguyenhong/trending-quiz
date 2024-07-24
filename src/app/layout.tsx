@@ -1,9 +1,10 @@
+import { Flex } from '@chakra-ui/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Providers } from './providers';
 
-const inter = Inter({ subsets: ['latin', 'vietnamese'] });
+const font = Inter({ subsets: ['latin', 'vietnamese'] });
 
 export const metadata: Metadata = {
   title: 'Trending Quiz',
@@ -11,14 +12,23 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children
+  children,
+  sidebar
 }: Readonly<{
   children: React.ReactNode;
+  sidebar: React.ReactNode;
 }>) {
   return (
     <html lang="vi">
-      <body className={inter.className}>
-        <Providers>{children}</Providers>
+      <body className={font.className}>
+        <Providers>
+          <Flex>
+            <div>{sidebar}</div>
+            <Flex direction="column" flex={1}>
+              {children}
+            </Flex>
+          </Flex>
+        </Providers>
       </body>
     </html>
   );
