@@ -24,7 +24,7 @@ export default function RootLayout({
         <Providers>
           <Flex>
             <div>{sidebar}</div>
-            <Flex direction="column" flex={1}>
+            <Flex direction="column" flex={1} p={10}>
               {children}
             </Flex>
           </Flex>
