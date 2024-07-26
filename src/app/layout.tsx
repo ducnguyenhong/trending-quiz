@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -13,10 +13,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  sidebar
+  sidebar,
+  header
 }: Readonly<{
   children: React.ReactNode;
   sidebar: React.ReactNode;
+  header: React.ReactNode;
 }>) {
   return (
     <html lang="vi">
@@ -24,9 +26,12 @@ export default function RootLayout({
         <Providers>
           <Flex>
             <div>{sidebar}</div>
-            <Flex direction="column" flex={1} p={10}>
-              {children}
-            </Flex>
+            <Box>
+              {header}
+              <Flex direction="column" flex={1} p={10}>
+                {children}
+              </Flex>
+            </Box>
           </Flex>
         </Providers>
       </body>

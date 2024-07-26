@@ -6,7 +6,7 @@ import Timer from './_component/timer';
 
 const QuizDetail: NextPage = () => {
   return (
-    <Flex w="full" mt={10}>
+    <Flex w="full" mt={5}>
       <Flex flex={2 / 3}>
         <QuestionItem />
       </Flex>

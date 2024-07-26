@@ -5,14 +5,14 @@ import { memo } from 'react';
 import { MENU_LIST } from './_component/menu.data';
 import UserInfo from './_component/user-info';
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   return (
     <Box w="350px" px={4} py={6} borderRight="1px solid #e6e6e6" h="100vh">
       <Flex direction="column" justify="space-between" h="full">
         <Box>
           <Flex align="center" gap={3} pl={1}>
             <Image src="/images/logo.png" width={45} height={45} alt="logo" />
-            <Text as="h1" fontWeight={700} fontSize={22}>
+            <Text as="h1" fontWeight={700} fontSize={24}>
               Trending Quiz
             </Text>
           </Flex>
@@ -38,9 +38,7 @@ const Sidebar = () => {
                             align="center"
                             gap={2.5}
                             px={3}
-                            bgColor={isActive ? '#eaf2ff' : '#FFF'}
-                            border="1px solid"
-                            borderColor={isActive ? '#e6e6e6' : '#FFF'}
+                            bgColor={isActive ? '#ffd1fd' : '#FFF'}
                             borderRadius={12}
                             py={2}
                           >
