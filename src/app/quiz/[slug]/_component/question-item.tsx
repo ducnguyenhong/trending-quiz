@@ -49,7 +49,16 @@ const QuestionItem: React.FC = () => {
           )}
 
           <Box mt={3}>
-            {isAnswerCorrect ? <Text>{correctAnswer?.explain}</Text> : <Text>{incorrectAnswer?.explain}</Text>}
+            {isAnswerCorrect ? (
+              <Text fontWeight={500}>{correctAnswer?.explain}</Text>
+            ) : (
+              <Text fontWeight={500}>{incorrectAnswer?.explain}</Text>
+            )}
+            {!isAnswerCorrect && (
+              <Text mt={4} color="green" fontWeight={500}>
+                Đáp án đúng: {correctAnswer?.explain}
+              </Text>
+            )}
           </Box>
         </Box>
       )}

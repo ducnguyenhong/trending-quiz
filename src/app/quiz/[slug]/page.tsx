@@ -8,11 +8,11 @@ import QuestionMap from './_component/question-map';
 const QuizDetail: NextPage = () => {
   return (
     <Flex w="full">
-      <Flex flex={2 / 3}>
+      <Flex flex={3 / 4}>
         <QuestionItem />
       </Flex>
 
-      <Flex flex={1 / 3} direction="column" gap={20}>
+      <Flex flex={1 / 4} direction="column" gap={20}>
         <QuestionMap />
 
         {/* <Timer /> */}
