@@ -9,12 +9,12 @@ const QuestionItem: React.FC = () => {
 
   return (
     <Box w="70%" mx="auto">
-      <Text fontWeight={700} fontSize={20}>
+      <Text fontWeight={700} fontSize={18}>
         Câu hỏi số 1
       </Text>
 
       <Flex direction="column" bgColor="#f8eafa" px={8} py={6} borderRadius={15} mt={5}>
-        <Box dangerouslySetInnerHTML={{ __html: question }} />
+        <Box fontSize={15} dangerouslySetInnerHTML={{ __html: question }} />
       </Flex>
 
       <Flex w="full" mt={12}>

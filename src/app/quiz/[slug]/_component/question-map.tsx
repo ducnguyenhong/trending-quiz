@@ -15,13 +15,18 @@ const QuestionMap: React.FC = () => {
               <GridItem
                 key={item}
                 border="1px solid"
-                w={20}
+                w={16}
                 py={2}
                 borderRadius={3}
                 cursor="pointer"
                 borderColor={isActive ? 'green' : '#e6e6e6'}
               >
-                <Text textAlign="center" color={isActive ? 'green' : '#070707'} fontWeight={isActive ? 600 : 400}>
+                <Text
+                  fontSize={14}
+                  textAlign="center"
+                  color={isActive ? 'green' : '#070707'}
+                  fontWeight={isActive ? 600 : 400}
+                >
                   Câu {item + 1}
                 </Text>
               </GridItem>

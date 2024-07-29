@@ -28,7 +28,7 @@ export default function RootLayout({
             <div>{sidebar}</div>
             <Flex direction="column" flex={1}>
               {header}
-              <Flex direction="column" flex={1} px={7} py={5}>
+              <Flex direction="column" flex={1} px={10} py={8}>
                 {children}
               </Flex>
             </Flex>

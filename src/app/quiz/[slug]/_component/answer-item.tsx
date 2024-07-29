@@ -30,7 +30,7 @@ const AnswerItem: React.FC<Props> = (props) => {
           _groupHover={{ bgColor: '#ffe6fe' }}
           transitionDuration="250ms"
         >
-          <Box fontWeight={500} dangerouslySetInnerHTML={{ __html: content }} />
+          <Box fontWeight={500} fontSize={15} dangerouslySetInnerHTML={{ __html: content }} />
         </Flex>
       </Flex>
     </GridItem>

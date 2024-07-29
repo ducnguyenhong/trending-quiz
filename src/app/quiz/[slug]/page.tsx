@@ -1,3 +1,5 @@
+'use client';
+
 import { Flex } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import QuestionItem from './_component/question-item';
