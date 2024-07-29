@@ -1,6 +1,7 @@
 import { QUESTION_LIST } from '@/utils/const';
-import { Box, Flex, Grid, GridItem, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, Text } from '@chakra-ui/react';
 import { memo } from 'react';
+import AnswerItem from './answer-item';
 
 const QuestionItem: React.FC = () => {
   const item = QUESTION_LIST[0];
@@ -8,22 +9,18 @@ const QuestionItem: React.FC = () => {
 
   return (
     <Box w="70%" mx="auto">
-      <Text fontWeight={600}>Câu hỏi số 1</Text>
+      <Text fontWeight={700} fontSize={20}>
+        Câu hỏi số 1
+      </Text>
 
-      <Flex direction="column" bgColor="#f7f7f8" px={8} py={6} borderRadius={3} mt={5}>
+      <Flex direction="column" bgColor="#f8eafa" px={8} py={6} borderRadius={15} mt={5}>
         <Box dangerouslySetInnerHTML={{ __html: question }} />
       </Flex>
 
-      <Flex w="full" mt={16}>
-        <Grid templateColumns="repeat(2, 1fr)" w="full" gap={8}>
+      <Flex w="full" mt={12}>
+        <Grid templateColumns="repeat(2, 1fr)" w="full" gap={10}>
           {answers.map((ans, andIdx) => {
-            const { content, isCorrect, explain } = ans;
-
-            return (
-              <GridItem key={andIdx} border="1px solid #e6e6e6" px={4} py={6} borderRadius={3} cursor="pointer">
-                <Box dangerouslySetInnerHTML={{ __html: content }} />
-              </GridItem>
-            );
+            return <AnswerItem key={andIdx} index={andIdx} item={ans} />;
           })}
         </Grid>
       </Flex>

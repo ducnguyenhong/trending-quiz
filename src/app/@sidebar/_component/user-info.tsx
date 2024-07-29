@@ -35,20 +35,20 @@ const UserInfo: React.FC = () => {
         transitionDuration="250ms"
         _hover={{ bgColor: '#f0f1f5' }}
       >
-        <Flex flex={1} align="center" gap={3}>
-          <Image src="https://cdn-icons-png.flaticon.com/128/3899/3899618.png" alt="user" width={38} height={38} />
+        <Flex flex={1} align="center" gap={2.5}>
+          <Image src="https://cdn-icons-png.flaticon.com/128/3899/3899618.png" alt="user" width={35} height={35} />
 
-          <Box>
-            <Text fontWeight={600} fontSize={15}>
+          <Box mt="-2px">
+            <Text fontWeight={600} fontSize={14}>
               Khách
             </Text>
-            <Text fontWeight={400} fontSize={14} color="#828282">
+            <Text fontWeight={400} fontSize={13} color="#828282">
               Đăng nhập ngay
             </Text>
           </Box>
         </Flex>
 
-        <IconChevronRight w="24px" h="24px" color="#828282" />
+        <IconChevronRight w="22px" h="22px" color="#828282" />
       </Flex>
 
       <Modal isOpen={isOpen} onClose={onClose} autoFocus={false} size="3xl">
@@ -56,7 +56,9 @@ const UserInfo: React.FC = () => {
         <ModalContent>
           <ModalHeader>Đăng nhập vào Trending Quiz</ModalHeader>
           <ModalCloseButton />
-          <ModalBody pb={10}>aaaaaaaaaaa</ModalBody>
+          <ModalBody pt={10} pb={20}>
+            <Text textAlign="center">Tính năng này sẽ được ra mắt ở phiên bản tiếp theo!</Text>
+          </ModalBody>
         </ModalContent>
       </Modal>
     </>

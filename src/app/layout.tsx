@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -26,12 +26,12 @@ export default function RootLayout({
         <Providers>
           <Flex>
             <div>{sidebar}</div>
-            <Box>
+            <Flex direction="column" flex={1}>
               {header}
-              <Flex direction="column" flex={1} p={10}>
+              <Flex direction="column" flex={1} px={7} py={5}>
                 {children}
               </Flex>
-            </Box>
+            </Flex>
           </Flex>
         </Providers>
       </body>

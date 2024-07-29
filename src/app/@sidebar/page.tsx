@@ -7,30 +7,30 @@ import UserInfo from './_component/user-info';
 
 const Sidebar: React.FC = () => {
   return (
-    <Box w="350px" px={4} py={6} borderRight="1px solid #e6e6e6" h="100vh">
+    <Box w="350px" p={4} borderRight="1px solid #e6e6e6" h="100vh">
       <Flex direction="column" justify="space-between" h="full">
         <Box>
           <Flex align="center" gap={3} pl={1}>
-            <Image src="/images/logo.png" width={45} height={45} alt="logo" />
-            <Text as="h1" fontWeight={700} fontSize={24}>
+            <Image src="/images/logo.png" width={30} height={30} alt="logo" />
+            <Text as="h1" fontWeight={700} fontSize={19} mt="3px">
               Trending Quiz
             </Text>
           </Flex>
 
-          <Flex direction="column" mt={10} gap={8}>
+          <Flex direction="column" mt={8} gap={8}>
             {MENU_LIST.map((menu) => {
               const { title, routes } = menu;
 
               return (
-                <Flex key={title} direction="column" gap={2}>
-                  <Text fontSize={15} color="#828282" px={3}>
+                <Flex key={title} direction="column" gap={1}>
+                  <Text fontSize={13} color="#828282" px={3}>
                     {title}
                   </Text>
 
-                  <Flex direction="column">
+                  <Flex direction="column" gap={1}>
                     {routes.map((item) => {
                       const { route, title, icon } = item;
-                      const isActive = route === '/hot-trend';
+                      const isActive = route === '/';
 
                       return (
                         <Link href={route} key={route}>
@@ -41,9 +41,11 @@ const Sidebar: React.FC = () => {
                             bgColor={isActive ? '#ffd1fd' : '#FFF'}
                             borderRadius={12}
                             py={2}
+                            _hover={{ bgColor: '#ffd1fd' }}
+                            transitionDuration="200ms"
                           >
-                            <Image src={icon} alt={title} width={20} height={20} />
-                            <Text fontSize={15} fontWeight={isActive ? 700 : 500}>
+                            <Image src={icon} alt={title} width={18} height={18} />
+                            <Text fontSize={14} fontWeight={isActive ? 700 : 500}>
                               {title}
                             </Text>
                           </Flex>
